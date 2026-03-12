@@ -12,7 +12,7 @@ def versus_cpu():
     jogada_rival = random.choice(escolhas)
 
     def verificação():
-        escolha = input("Escolha entre Pedra, Papel, Tesoura, Lagarto ou Spock: ").lower()
+        escolha = input("\nEscolha entre Pedra, Papel, Tesoura, Lagarto ou Spock: ").lower()
         while escolha not in escolhas:
             print("Opção inválida.")
             escolha = input("Tente novamente: ").lower()
@@ -36,7 +36,6 @@ def versus_cpu():
         print(f"{pontos_jogador}  X  {pontos_rival}")
         print(f"Seu opononente jogou: {jogada_rival}")
         dialogo_especial(rodada + 1, rival, pontos_jogador, pontos_rival)
-        print(" ")
 
         #Condição de Rival
         if rival == "Monarca":
@@ -46,5 +45,5 @@ def versus_cpu():
         if rival == "Spock":
             jogada_rival = Spock(pontos_jogador, pontos_rival)
 
-    print(f"Seu oponente era: {rival}")
-    print(f"\nVocê  X  {rival} \n  {pontos_jogador}   X   {pontos_rival}")
+    print(f"\nSeu oponente era: {rival}")
+    print(f"Você  X  {rival} \n  {pontos_jogador}   X   {pontos_rival}")
