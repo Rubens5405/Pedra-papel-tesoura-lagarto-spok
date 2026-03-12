@@ -1,20 +1,13 @@
 import time
-import keyboard
 
 velocidade_padrao = 0.04
 velocidade_media = 0.10
 velocidade_lenta = 0.20
 
 def escrita(texto, velocidade_texto):
-    pulou = False
     for letra in texto:
-        if keyboard.is_pressed('shift'):
-            pulou = True
-        
         print(letra, end='', flush=True)
-        
-        if not pulou:
-            time.sleep(velocidade_texto)
+        time.sleep(velocidade_texto)
     print()
 
 def introdução():
@@ -43,8 +36,6 @@ def introdução():
     "Seres poderosos de todos os continentes estão vindo para jogar, e entre eles, está você.\n"
 
     escrita(texto3, velocidade_padrao)
-
-    print(" ")
 
     texto4 = "VOCÊ ESTÁ PRONTO?"
 
